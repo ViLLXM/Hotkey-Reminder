@@ -1,0 +1,104 @@
+{
+  "name": "hotkey-reminder",
+  "displayName": "hotkey_reminder",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "hotkey-reminder.show_hotkeys",
+        "title": "Show Hotkeys"
+      },
+      {
+        "command": "hotkey-reminder.start_timer",
+        "title": "Start timer for hotkeys reminder"
+      },
+      {
+        "command": "hotkey-reminder.start_interval_timer",
+        "title": "Start interval timer for hotkeys reminder"
+      },
+      {
+        "command": "hotkey-reminder.end_timer",
+        "title": "End timers for hotkeys reminder"
+      },
+      {
+        "command": "hotkey-reminder.add_hotkey",
+        "title": "Add hotkey to reminder"
+      },
+      {
+        "command": "hotkey-reminder.delete_hotkey",
+        "title": "Delete last hotkey in reminder"
+      },
+      {
+        "command": "hotkey-reminder.delete_all_hotkey",
+        "title": "Delete all hotkeys"
+      },
+      {
+        "command": "hotkey-reminder.change_time_in_timers",
+        "title": "Change time between timers"
+      }
+    ],
+
+    "keybindings":[
+      {
+        "command": "hotkey-reminder.show_hotkeys",
+        "key": "ctrl+1"
+      },
+      {
+        "command": "hotkey-reminder.start_timer",
+        "key": "ctrl+2"
+      },
+      {
+        "command": "hotkey-reminder.start_interval_timer",
+        "key": "ctrl+alt+2"
+      },
+      {
+        "command": "hotkey-reminder.end_timer",
+        "key": "ctrl+3"
+      },
+      {
+        "command": "hotkey-reminder.change_time_in_timers",
+        "key": "ctrl+4"
+      },
+      {
+        "command": "hotkey-reminder.add_hotkey",
+        "key": "ctrl+5"
+      },
+      {
+        "command": "hotkey-reminder.delete_hotkey",
+        "key": "ctrl+6"
+      },
+      {
+        "command": "hotkey-reminder.delete_all_hotkey",
+        "key": "ctrl+alt+6"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
