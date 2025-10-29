@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-  let t: NodeJS.Timeout | undefined;
-  let t_i: NodeJS.Timeout | undefined;
+  let t = 0;
+  let t_i = 0;
 
   let time_between_messages = context.globalState.get<number>('time_between', 1000 * 60 * 60);
 
